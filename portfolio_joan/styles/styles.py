@@ -1,52 +1,111 @@
-import reflex as rx 
+import reflex as rx
 from enum import Enum
+
 
 from .fonts import Fonts as Fonts
 
-# circulos de fondo de la pagina
-dots : dict = {
-    "@keyframes dots": {
-        "0%": {"background_position": "0 0"},
-        "100%": {"background_position": "40px 40px"}
-    },
-    "animation" : "dots 4s linear infinite alternate-reverse both",
-}
 
-# Tamaños 
+# Tamaños
 class Size(Enum):
     ZERO = ["0px !important"]
-    SMALL = ["0.5em", "0.6em", "0.7em", "0.8em", "1em"]
+    SMALL = ["0.7em", "0.7em", "0.8em", "0.8em", "0.85em"]
     MEDIUM = ["0.8em", "0.9em", "1em", "1.1em", "1.2em"]
     DEFAULT = ["1em", "1.1em", "1.2em", "1.3em", "1.4em"]
-    LARGE = ["1.5em", "1.6em", "1.7em", "1.8em", "1.9em"]
-    BIG = ["2em", "2.1em", "2.2em", "2.3em", "2.4em"]
-    VERY_BIG = ["4em", "4.1em", "4.2em", "4.3em", "4.5em"] 
+    LARGE = ["1.3em", "1.5em", "1.7em", "1.8em", "1.9em"]
+    BIG = ["1.5em", "1.7em", "2.2em", "2.3em", "2.4em"]
+    TITLE_HERO = ["1.5em", "1.7em", "3em", "3.6em", "4em"]
+    VERY_BIG = ["2em", "2.7em", "2.8em", "3em", "3.5em"]
+
+
+# Estilo -> backgroun 
+background_style = { 
+    "_light": {
+        "background": "radial-gradient(circle, rgba(0,0,0,0.35) 1.3px, transparent 1px)",
+        "background_size": "20px 20px",
+    },
+    "background": "radial-gradient(circle, rgba(255,255,255,0.09) 1.3px, transparent 1px)",
+    "background_size": "20px 20px",
+    "@keyframes dots": {
+        "0%": {"background_position": "0 0"},
+        "100%": {"background_position": "40px 40px"},
+    },
+    "animation": "dots 4s linear infinite alternate-reverse both",
+}
 
 
 # Estilos base de la pagina
 BASE_STYLE = {
     "font_family": Fonts.DEFAULT.value,
-    
     # background
-    "_light":{"background" : "radial-gradient(circle, rgba(0,0,0,0.35) 1px, transparent 1px)","background_size" : "25px 25px"},
-    "background" : "radial-gradient(circle, rgba(255,255,255,0.09) 1px, transparent 1px)",
-    "background_size" : "25px 25px",
-    "style":dots,
+    **background_style,
 }
 
-# Estilos de componentes
 
-# componentes de navbar 
-hstack_navbar_style= dict(
-        font_size=Size.SMALL.value,
-        spacing="2em",
-        width="100%",
-        height="50px",
-        padding=["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem"],
-        position="fixed",
-        top="0px",
-        z_index="10",
+# ESTILOS COMPONENTES PAGINA 
 
+# No -> _hover
+no_hover_style = {
+    ":hover": {
+        "text_decoration": "none",  
+        "color": "inherit", 
+    }
+}
+
+# Estilo -> navbar
+hstack_navbar_style = dict(
+    font_size=Size.MEDIUM.value,
+    text_shadow="2px 2px 4px #000000",
+    spacing="2em",
+    width="100%",
+    height="50px",
+    padding=["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem"],
+    position="fixed",
+    top="0px",
+    z_index="10",
 )
 
 
+# Estilo -> Hero
+vstack_hero_style = dict(
+    display="flex",
+    flex_direction="column",
+    justify_content="center",
+    height="100vh",
+    margin="auto",
+    padding=["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem"],
+    background_size="cover",
+)
+
+# Estilo -> animacion hand
+style_hand = {
+    "@keyframes wave": {
+        "0%": {"transform": "rotate(45deg)"},
+        "100%": {"transform": "rotate(-15deg)"},
+    },
+    "animation": "wave 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both",
+}
+
+# card 
+button_title_style = dict(
+    font_size = Size.DEFAULT.value,
+)
+
+button_body_style = dict (
+    font_size = Size.MEDIUM.value,
+)
+
+style_card = dict (
+    padding="1em",
+    border="3px solid #ccc",  # Estilo de borde para la tarjeta
+    border_radius="0.5em", # Esquinas redondeadas para la tarjeta
+    box_shadow = "0 0 8px #f0f0f0",
+    width="300px",  # Ancho fijo para la tarjeta
+    margin="1em",
+
+)
+
+div_card_style = dict (
+    display = "flex",
+    justify_content = "center",
+    aligns_items = "center"
+)
