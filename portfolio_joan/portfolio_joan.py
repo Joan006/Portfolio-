@@ -24,7 +24,7 @@ def index() -> rx.Component:
     return rx.box(
         navbar(),
         hero(),
-        about_me()
+        about_me(),
 )
 
 
