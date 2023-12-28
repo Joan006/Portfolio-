@@ -8,6 +8,7 @@ from .fonts import Fonts as Fonts
 # Tamaños
 class Size(Enum):
     ZERO = ["0px !important"]
+    VERY_SMALL = ["0.5em", "0.5em", "0.6em", "0.6em", "0.6em"]
     SMALL = ["0.7em", "0.7em", "0.8em", "0.8em", "0.85em"]
     MEDIUM = ["0.8em", "0.9em", "1em", "1.1em", "1.2em"]
     DEFAULT = ["1em", "1.1em", "1.2em", "1.3em", "1.4em"]
@@ -20,10 +21,10 @@ class Size(Enum):
 # Estilo -> backgroun 
 background_style = { 
     "_light": {
-        "background": "radial-gradient(circle, rgba(0,0,0,0.35) 1.3px, transparent 1px)",
+        "background": "radial-gradient(circle, rgba(255,255,255,0.35) 1.3px, transparent 1px)",
         "background_size": "20px 20px",
     },
-    "background": "radial-gradient(circle, rgba(255,255,255,0.09) 1.3px, transparent 1px)",
+    "background": "radial-gradient(circle, rgba(255,255,255,0.09) 1.3px, rgba(0,0,0,1) 1px)",
     "background_size": "20px 20px",
     "@keyframes dots": {
         "0%": {"background_position": "0 0"},
@@ -62,6 +63,9 @@ hstack_navbar_style = dict(
     position="fixed",
     top="0px",
     z_index="10",
+    background_color= "transparent",
+    opacity="0.5",
+    
 )
 
 
@@ -86,26 +90,29 @@ style_hand = {
 }
 
 # card 
-button_title_style = dict(
-    font_size = Size.DEFAULT.value,
-)
-
-button_body_style = dict (
-    font_size = Size.MEDIUM.value,
+button_title_style = dict ( 
+    font_size = Size.VERY_SMALL.value,
 )
 
 style_card = dict (
+    background = "rgba(0, 0, 0, 0.3)",
     padding="1em",
-    border="3px solid #ccc",  # Estilo de borde para la tarjeta
-    border_radius="0.5em", # Esquinas redondeadas para la tarjeta
-    box_shadow = "0 0 8px #f0f0f0",
-    width="300px",  # Ancho fijo para la tarjeta
+    border="7px solid #757575",  # Estilo de borde para la tarjeta
+    border_radius="1em", # Esquinas redondeadas para la tarjeta
+    box_shadow = "0 0 8px #757575",
+    width="9em",# Ancho fijo para la tarjeta
     margin="1em",
-
+    height="17em"
 )
 
 div_card_style = dict (
     display = "flex",
     justify_content = "center",
-    aligns_items = "center"
+    aligns_items = "center",
+) 
+
+title_card_style = dict (
+font_size=Size.SMALL.value,  font_weight="900",
+    _dark={"background": "linear-gradient(to right, #e1e1e1, #f9cd45)","background_clip": "text",}
 )
+

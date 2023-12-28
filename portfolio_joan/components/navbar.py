@@ -1,5 +1,5 @@
 import reflex as rx
-from portfolio_joan.styles.styles import Size as Size
+from portfolio_joan.styles.styles import Size as Size        
 import portfolio_joan.styles.styles as styles
 
 
@@ -26,4 +26,4 @@ def navbar() -> rx.Component:
             margin="auto",
         ),
         style=styles.hstack_navbar_style
-    )
+        )

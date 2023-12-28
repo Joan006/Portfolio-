@@ -15,7 +15,7 @@ def hero() -> rx.Component:
                     font_size=Size.TITLE_HERO.value,
                     font_weight="900",
                     _dark={
-                        "background": "linear-gradient(to right, #e1e1e1, #757575)",
+                        "background": "linear-gradient(to right, #e1e1e1, #f9cd45)",
                         "background_clip": "text",
                     },
                 ),
@@ -35,7 +35,7 @@ def hero() -> rx.Component:
             rx.link(
                 rx.vstack( 
                     rx.text("more about me", font_size=Size.SMALL.value),  
-                    rx.icon(tag="arrow_down", box_size=Size.SMALL.value),
+                    rx.icon(tag="arrow_down", box_size=Size.MEDIUM.value),
                     style=styles.no_hover_style,
                 ),
                 href="#about-me",
