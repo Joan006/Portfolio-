@@ -11,7 +11,7 @@ def link_button(title:str,url:str, image:str ) -> rx.Component:
                 rx.image(
                     src = image,
                     width = Size.MEDIUM.value,
-                    margin = Size.VERY_SMALL.value
+                    margin = Size.VERY_SMALL.value,
                 ),
                 rx.vstack(
                     rx.text(title, style=styles.button_title_style),
@@ -26,8 +26,11 @@ def link_button(title:str,url:str, image:str ) -> rx.Component:
         is_external=True,
         width="100%",
         display="flex",
-        justify_content= "",
-        background_color = "#9b7703",
+        justify_content= "center",
+        background_color = "black",
+        border = "1px solid #ffbd44",
+        color = "#ffbd44",
         border_radius = "1em",
-
+        _hover={"transform": "scale(1)","box_shadow": "0 0 9px #f9cd45"},
+        style=styles.no_hover_style
     )

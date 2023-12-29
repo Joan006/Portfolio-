@@ -1,5 +1,4 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
-from re import split
 from rxconfig import config
 import reflex as rx
 
@@ -8,8 +7,7 @@ import portfolio_joan.styles.styles as styles
 from portfolio_joan.components.navbar import navbar
 from portfolio_joan.views.hero import hero
 from portfolio_joan.views.about_me import about_me
-
-
+from portfolio_joan.views.info_me import info_me
 
 filename = f"{config.app_name}/{config.app_name}.py"
 
@@ -24,9 +22,10 @@ def index() -> rx.Component:
     return rx.box(
         navbar(),
         hero(),
+        info_me(),
         about_me(),
 )
-
+ 
 
 
 # Add state and page to the app.

@@ -9,15 +9,19 @@ import portfolio_joan.styles.styles as styles
 def hero() -> rx.Component:
     return rx.box(
         rx.vstack(
+            rx.avatar(
+            name = "Joan Martinez",
+            src="me2.jpg", 
+            show_border=True,
+            size="xl",
+            box_shadow = "0 0 9px #f9cd45"
+            ),
             rx.hstack( 
             rx.heading(
                     "Hi - I'm Joan Martinez",
                     font_size=Size.TITLE_HERO.value,
                     font_weight="900",
-                    _dark={
-                        "background": "linear-gradient(to right, #e1e1e1, #f9cd45)",
-                        "background_clip": "text",
-                    },
+                    style=styles.heading_style
                 ),
                 rx.heading(
                     "👋", 
@@ -28,7 +32,7 @@ def hero() -> rx.Component:
             rx.text("Apps to contact me", font_size=Size.LARGE.value), 
             social_media(),
             align_items="center",
-            padding_top="15em"
+            padding_top="13em"
         ),
 
         rx.vstack(
@@ -36,7 +40,6 @@ def hero() -> rx.Component:
                 rx.vstack( 
                     rx.text("more about me", font_size=Size.SMALL.value),  
                     rx.icon(tag="arrow_down", box_size=Size.MEDIUM.value, class_name="animate-bounce"),
-                    style=styles.no_hover_style,
                 ),
                 href="#about-me",
                 align_items="center",

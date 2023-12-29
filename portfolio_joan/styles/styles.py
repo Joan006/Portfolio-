@@ -1,6 +1,8 @@
 import reflex as rx
 from enum import Enum
 
+from reflex.event import background
+
 
 from .fonts import Fonts as Fonts
 
@@ -37,8 +39,12 @@ background_style = {
 # Estilos base de la pagina
 BASE_STYLE = {
     "font_family": Fonts.DEFAULT.value,
+    "button" : {
+        "background":"none !important"
+    },
     # background
     **background_style,
+    
 }
 
 
@@ -63,9 +69,8 @@ hstack_navbar_style = dict(
     position="fixed",
     top="0px",
     z_index="10",
-    background_color= "transparent",
     opacity="0.5",
-    
+
 )
 
 
@@ -77,8 +82,19 @@ vstack_hero_style = dict(
     height="100vh",
     margin="auto",
     padding=["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem"],
-    background_size="cover",
+    backgroundAsize="cover",
 )
+
+heading_style = {
+    "background": "linear-gradient(to right, #e1e1e1, #f9cd45)",
+    "background_clip": "text",
+}
+
+# Estilo -> avatar   
+avatar_style = {
+    "border": "0px solid transparent", "border_image": "linear-gradient(to right, #e1e1e1, #f9cd45) 1"
+}
+
 
 # Estilo -> animacion hand
 style_hand = {
@@ -89,25 +105,24 @@ style_hand = {
     "animation": "wave 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both",
 }
 
-# card 
+# Card - style
 button_title_style = dict ( 
     font_size = Size.VERY_SMALL.value,
 )
 
 style_card = dict (
-    background = "rgba(0, 0, 0, 0.3)",
+    background = "#000c16",
     padding="1em",
-    border="7px solid #9b7703",  # Estilo de borde para la tarjeta
-    border_radius="1em", # Esquinas redondeadas para la tarjeta
-    box_shadow = "0 0 8px #9b7703",
-    width="9em",# Ancho fijo para la tarjeta
+    border_radius="2em", 
+    box_shadow = "0 0 8px #2777bb",
+    width="9em",
     margin="1em",
     height="17em"
 )
 
 div_card_style = dict (
     display = "flex",
-    justify_content = "center",
+    justify_content = "center", 
     aligns_items = "center",
 ) 
 
@@ -116,3 +131,9 @@ font_size=Size.SMALL.value,  font_weight="900",
     _dark={"background": "linear-gradient(to right, #e1e1e1, #f9cd45)","background_clip": "text",}
 )
 
+# contaiter -> info_me
+container_infome_style = dict (
+    background_color = "black",
+    border_radius="2em", 
+    box_shadow = "0 0 8px #2777bb"
+)

@@ -16,7 +16,7 @@ def proyects() -> rx.Component:
                 ),
                 rx.text("QR Generator", style=styles.title_card_style
                 ),  
-                rx.text("Script,QR code generator",font_size=Size.VERY_SMALL.value),  # Descripción del proyecto
+                rx.text("Script,QR code generator",font_size=Size.VERY_SMALL.value),  
                 link_button(
                     "Repository",
                     " ",
@@ -37,7 +37,7 @@ def proyects() -> rx.Component:
                 ),
                 rx.text("Automation send emails", style=styles.title_card_style 
                 ),  
-                rx.text("Script,send emails automation",font_size=Size.VERY_SMALL.value, margin_bottom = "10px"),  
+                rx.text("Script,send emails automation",font_size=Size.VERY_SMALL.value),  
                 link_button(
                     "Repository",
                     " ",
