@@ -1,26 +1,32 @@
 import reflex as rx
-from reflex.event import background
 
 from portfolio_joan.styles.styles import Size as Size
 import  portfolio_joan.styles.styles as styles
+
+def image_text_button(image_url: str, button_text: str, text_font_size: str) -> rx.Component:
+    return rx.button(
+        rx.image(src=image_url, alt="Button Image"),  # Include the image
+        rx.text(button_text, font_size=text_font_size),  # Apply font_size prop for text size
+        style={"padding": "10px", "border_radius": "5px"}  # Additional styling attributes
+    )
 
 def link_button(title:str,url:str, image:str ) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
-                rx.image(
+               rx.image(
                     src = image,
                     width = Size.MEDIUM.value,
-                    margin = Size.VERY_SMALL.value,
+                    margin = "5px", 
                 ),
                 rx.vstack(
-                    rx.text(title, style=styles.button_title_style),
+                rx.text(title, style=styles.button_title_style),
                     spacing = "0em",
-                    align_items="start",
                     margin = Size.ZERO.value,
-                )
+
+                ),
+                justify_content="space-around",
             ),
-            padding = "0px"
         ),
         href=url,
         is_external=True,

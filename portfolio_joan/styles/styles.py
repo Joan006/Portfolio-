@@ -1,9 +1,6 @@
 import reflex as rx
 from enum import Enum
 
-from reflex.event import background
-
-
 from .fonts import Fonts as Fonts
 
 
@@ -69,7 +66,8 @@ hstack_navbar_style = dict(
     position="fixed",
     top="0px",
     z_index="10",
-    opacity="0.5",
+    background_color= "rgb(0 0 0 / 70%)",
+    backdrop_filter= "blur(10px)"
 
 )
 
@@ -82,13 +80,14 @@ vstack_hero_style = dict(
     height="100vh",
     margin="auto",
     padding=["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem"],
-    backgroundAsize="cover",
+    background_size="cover",
 )
 
 heading_style = {
     "background": "linear-gradient(to right, #e1e1e1, #f9cd45)",
     "background_clip": "text",
 }
+
 
 # Estilo -> avatar   
 avatar_style = {
@@ -105,35 +104,46 @@ style_hand = {
     "animation": "wave 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both",
 }
 
-# Card - style
+# --- Projeccts zone - style
+
+heading_style_blur = {
+    "background": "linear-gradient(to right, #e1e1e1, #f9cd45)",
+    "background_clip": "text",
+    "backdrop_filter": "blur(2px)"
+
+}
+
+# card title - style
 button_title_style = dict ( 
     font_size = Size.VERY_SMALL.value,
 )
 
+# card - style
 style_card = dict (
     background = "#000c16",
-    padding="1em",
+    padding="0em",
     border_radius="2em", 
-    box_shadow = "0 0 8px #2777bb",
-    width="9em",
-    margin="1em",
-    height="17em"
+    box_shadow = "0 0 20px #2777bb",
+    margin="1em",    
+    _hover={"transform": "scale(1)","box_shadow": "0 0 7px #f9cd45","transition": "all 0.3s ease-in-out", "transform": "translateY(-10px)"},
+    width=["7.7em","10emem","10em","10em","10em"],
+    height=["16em","19em","19em","19em","19em"],
+    direction="column",
+    align="stretch",
+    justify="start",
 )
-
-div_card_style = dict (
-    display = "flex",
-    justify_content = "center", 
-    aligns_items = "center",
-) 
-
+ 
+# title card - style
 title_card_style = dict (
-font_size=Size.SMALL.value,  font_weight="900",
+font_size=Size.MEDIUM.value,  font_weight="900",
     _dark={"background": "linear-gradient(to right, #e1e1e1, #f9cd45)","background_clip": "text",}
 )
 
-# contaiter -> info_me
+
+
+# --- contaiter -> info_me
 container_infome_style = dict (
     background_color = "black",
     border_radius="2em", 
     box_shadow = "0 0 8px #2777bb"
-)
+) 

@@ -6,8 +6,9 @@ import reflex as rx
 import portfolio_joan.styles.styles as styles
 from portfolio_joan.components.navbar import navbar
 from portfolio_joan.views.hero import hero
-from portfolio_joan.views.about_me import about_me
+from portfolio_joan.views.about_me import projects_zone
 from portfolio_joan.views.info_me import info_me
+from portfolio_joan.views.footer import footer
 
 filename = f"{config.app_name}/{config.app_name}.py"
 
@@ -23,12 +24,13 @@ def index() -> rx.Component:
         navbar(),
         hero(),
         info_me(),
-        about_me(),
+        projects_zone(),
+        footer()
 )
  
 
 
 # Add state and page to the app.
 app = rx.App(style=styles.BASE_STYLE)
-app.add_page(index)
+app.add_page(index, title="JoanDv || Portfolio", image="/favicon.ico")
 app.compile()
