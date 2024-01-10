@@ -9,7 +9,7 @@ def projects_zone() -> rx.Component:
     # divs - verticales definidos , con su contenido
     vertical_div_1 = rx.box(
         rx.tablet_and_desktop(proyects_cards(), width="100%", height="100%"),
-        rx.mobile_only(proyects_cards_mobile(), width="100%", height="100%", style={"backdrop-filter":"blur(1px)"}),
+        rx.mobile_only(proyects_cards_mobile(), width="100%", height="100%"),
     )
     vertical_div_2 = rx.box(
         rx.desktop_only(
@@ -35,6 +35,8 @@ def projects_zone() -> rx.Component:
                 font_size=Size.BIG.value,
                 font_weight="600",
                 margin_start="2em",
+                text_align= "center",
+                margin = "30px",
                 style=styles.heading_style_blur,
             ),
         ),
@@ -63,7 +65,8 @@ def projects_zone() -> rx.Component:
                     "background-position": "center",
                     "background-size": "cover",
                     "background-attachment": "fixed",
-                    "padding": "1em",  
+                    "padding": "1em", 
+                    "loading":"lazy"
                 },
             )
         ),
@@ -72,11 +75,12 @@ def projects_zone() -> rx.Component:
             vertical_container,
             spacing="1em",
             style={
-                "background-image": "url('imagenes/room_desktop2.jpg')",
+                "background-image": "url('imagenes/room_desktop.jpg')",
                 "background-position": "center",
                 "background-attachment": "fixed",
                 "background-size": "cover",
-                "padding": "1em",  # Esto asegura que la imagen cubra todo el contenedor
+                "padding": "1em",
+                "loading":"lazy" # Esto asegura que la imagen cubra todo el contenedor
             },
         ),
     )

@@ -14,7 +14,8 @@ def hero() -> rx.Component:
             src="me2.jpg", 
             show_border=True,
             size="xl",
-            box_shadow = "0 0 9px #f9cd45"
+            box_shadow = "0 0 9px #f9cd45",
+            loading="lazy"
             ),
             rx.hstack( 
             rx.heading(

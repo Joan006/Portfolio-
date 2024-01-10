@@ -15,11 +15,13 @@ def navbar() -> rx.Component:
         ),
         rx.box(
             rx.hstack(
-                rx.button(
-                    rx.icon(tag="moon"),
-                    on_click=rx.toggle_color_mode,
-                    font_size=Size.SMALL.value,
-                    size="xs"
+                rx.link(
+                    rx.image( 
+                        src="icons/github.svg", 
+                        font_size=Size.SMALL.value,
+                        size="xs"
+                    ),
+                    href="https://github.com/Joan006",
                 ),
             ),
             width="25%",

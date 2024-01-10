@@ -120,6 +120,7 @@ button_title_style = dict (
 
 # card - style
 style_card = dict (
+    text_align= "center",
     background = "#000c16",
     padding="0em",
     border_radius="2em", 
@@ -145,5 +146,7 @@ font_size=Size.MEDIUM.value,  font_weight="900",
 container_infome_style = dict (
     background_color = "black",
     border_radius="2em", 
-    box_shadow = "0 0 8px #2777bb"
+    box_shadow = "0 0 20px #2777bb",
+    margin="1em",    
+    _hover={"transform": "scale(1)","box_shadow": "0 0 7px #f9cd45","transition": "all 0.3s ease-in-out", "transform": "translateY(-4px)"},
 ) 

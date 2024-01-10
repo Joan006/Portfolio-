@@ -10,14 +10,15 @@ def image_text_button(image_url: str, button_text: str, text_font_size: str) -> 
         style={"padding": "10px", "border_radius": "5px"}  # Additional styling attributes
     )
 
-def link_button(title:str,url:str, image:str ) -> rx.Component:
+def link_button(title:str,url, image:str ) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
                rx.image(
                     src = image,
                     width = Size.MEDIUM.value,
-                    margin = "5px", 
+                    margin = "5px",
+                    loading="lazy"
                 ),
                 rx.vstack(
                 rx.text(title, style=styles.button_title_style),
