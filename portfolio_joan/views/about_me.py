@@ -1,4 +1,5 @@
 import reflex as rx
+from reflex.components import vstack
 from reflex.constants import style
 from portfolio_joan.components.proyects import proyects_cards, proyects_cards_mobile
 from portfolio_joan.styles.styles import Size

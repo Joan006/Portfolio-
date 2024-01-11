@@ -8,7 +8,7 @@ def navbar() -> rx.Component:
         rx.box(
             rx.hstack(
                 rx.icon(tag="email", _dark={"color": "rgba(255, 255, 255, 0.5)"}),
-                rx.text("martinez.olivares.006@gmail.com", font_size=Size.SMALL.value),
+                rx.text("martinez.olivares.006@gmail.com", font_size=Size.SMALL.value, color = "#f8c133"),
             ),
             width="25%",
             margin="auto",
