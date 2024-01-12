@@ -22,7 +22,7 @@ def card_with_content(image_url, title_card,title, url, image) -> rx.Component:
 def proyects_cards() -> rx.Component:
     return rx.responsive_grid(
         card_with_content("imagenes/python_imagen.jpeg", "QR Generator","repository", "file:///Users/mac/Downloads/Joan-Mart%C3%ADnez-Olivares.pdf", "icons/github.svg"),
-        card_with_content("imagenes/python_imagen.jpeg", "Automation send emails","repository", "https://github.com/Joan006/django_send_emails", "icons/github.svg"),
+        card_with_content("imagenes/python_imagen.jpeg", "Send emails","repository", "https://github.com/Joan006/django_send_emails", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Automation join pdf","repository", "https://github.com/Joan006/automation_join_pdfs", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Compressor images","repository", "https://github.com/Joan006/compressor-images", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Remove Background","repository", "https://github.com/Joan006/remove-background", "icons/github.svg"),
@@ -41,7 +41,7 @@ def proyects_cards() -> rx.Component:
 def proyects_cards_mobile() -> rx.Component:
     return rx.responsive_grid(
         card_with_content("imagenes/python_imagen.jpeg", "QR Generator","repository", "https://github.com/Joan006/qr_generator", "icons/github.svg"),
-        card_with_content("imagenes/python_imagen.jpeg", "Automation send emails","repository", "https://github.com/Joan006/django_send_emails", "icons/github.svg"),
+        card_with_content("imagenes/python_imagen.jpeg", "Send emails","repository", "https://github.com/Joan006/django_send_emails", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Automation join pdf","repository", "https://github.com/Joan006/automation_join_pdfs", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Compressor images","repository", "https://github.com/Joan006/compressor-images", "icons/github.svg"),
         card_with_content("imagenes/python_imagen.jpeg", "Remove Background","repository", "https://github.com/Joan006/remove-background", "icons/github.svg"),
