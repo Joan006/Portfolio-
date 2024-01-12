@@ -13,8 +13,7 @@ def education_item(src_icon: str, name_school: str, description: str) -> rx.Comp
                     rx.image(src=src_icon, margin=Size.MEDIUM.value),
                     rx.text(description, color = "#f8c133",)
                 ),
-                font_size = Size.SMALL.value,
-               font_weight="700"
+                style=styles.text_component,
             )
         ),
         width="100%",

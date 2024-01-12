@@ -9,6 +9,7 @@ from portfolio_joan.views.hero import hero
 from portfolio_joan.views.about_me import projects_zone
 from portfolio_joan.views.info_me import info_me
 from portfolio_joan.views.education_list import education_list
+from portfolio_joan.views.my_skills import my_skills, my_skills_mobile
 from portfolio_joan.views.footer import footer
 
 
@@ -25,11 +26,11 @@ def index() -> rx.Component:
     return rx.box(
         navbar(),
         hero(),
-        education_list(),
-        #info_me(),
-        projects_zone(),
         info_me(),
-        #education_list(),
+        my_skills(),
+        my_skills_mobile(),
+        education_list(),
+        projects_zone(),
         footer()
 )
  

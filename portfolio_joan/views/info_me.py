@@ -15,7 +15,6 @@ def info_me():
             ),
             padding="2em",
             width="80%",
-            border_radius="1em",
             margin="auto",
             style=styles.container_infome_style,
         ),

@@ -47,6 +47,15 @@ BASE_STYLE = {
 
 # ESTILOS COMPONENTES PAGINA 
 
+
+# Estilo - rx.text 
+text_component = dict( 
+    font_size = Size.SMALL.value,
+    font_weight="700"
+)
+
+
+
 # No -> _hover
 no_hover_style = {
     ":hover": {
@@ -111,6 +120,10 @@ heading_style_blur = {
     "background_clip": "text",
     "backdrop_filter": "blur(2px)"
 
+}
+
+blur_zone = {
+    "backdrop_filter": "blur(2px)"
 }
 
 # card title - style
