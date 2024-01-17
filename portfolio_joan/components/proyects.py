@@ -8,7 +8,7 @@ def card_with_content(image_url, title_card,title, url, image) -> rx.Component:
     return rx.vstack(
         rx.card(
             rx.aspect_ratio(rx.image(src=image_url, border_radius="2em"),loading="lazy", ratio=16 / 14),
-            header=rx.heading(title_card, style=styles.title_card_style),
+            header=rx.heading(title_card, font_size=Size.MEDIUM.value,  font_weight="900",style=styles.title_card_style),
             footer = link_button(title, url, image),
             style=styles.style_card,
         ),

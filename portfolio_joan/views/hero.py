@@ -40,7 +40,7 @@ def hero() -> rx.Component:
             rx.link(
                 rx.vstack( 
                     rx.text("more about me", font_size=Size.SMALL.value),  
-                    rx.icon(tag="arrow_down", font_size=Size.MEDIUM.value, class_name="animate-bounce"),
+                    rx.icon(tag="arrow_down", color="white", font_size=Size.MEDIUM.value, class_name="animate-bounce"),
                 ),
                 href="#about-me",
                 align_items="center",

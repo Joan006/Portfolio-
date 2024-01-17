@@ -19,12 +19,8 @@ class Size(Enum):
 
 # Estilo -> backgroun 
 background_style = { 
-    "_light": {
-        "background": "radial-gradient(circle, rgba(255,255,255,0.35) 1.3px, transparent 1px)",
+        "background": "radial-gradient(circle, rgba(0,0,0,0.80) 1.3px, rgba(0,0,0,1) 1.3px)",
         "background_size": "20px 20px",
-    },
-    "background": "radial-gradient(circle, rgba(255,255,255,0.09) 1.3px, rgba(0,0,0,1) 1px)",
-    "background_size": "20px 20px",
     "@keyframes dots": {
         "0%": {"background_position": "0 0"},
         "100%": {"background_position": "40px 40px"},
@@ -35,6 +31,9 @@ background_style = {
 
 # Estilos base de la pagina
 BASE_STYLE = {
+    rx.Text: {
+        "color": "white"  
+    },
     "font_family": Fonts.DEFAULT.value,
     "button" : {
         "background":"none !important"
@@ -50,6 +49,7 @@ BASE_STYLE = {
 
 # Estilo - rx.text 
 text_component = dict( 
+    color="white",
     font_size = Size.SMALL.value,
     font_weight="700"
 )
@@ -148,10 +148,8 @@ style_card = dict (
 )
  
 # title card - style
-title_card_style = dict (
-font_size=Size.MEDIUM.value,  font_weight="900",
-    _dark={"background": "linear-gradient(to right, #e1e1e1, #f9cd45)","background_clip": "text",}
-)
+title_card_style ={
+    "background": "linear-gradient(to right, #e1e1e1, #f9cd45)","background_clip": "text",}
 
 
 

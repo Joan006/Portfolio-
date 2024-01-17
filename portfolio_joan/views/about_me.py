@@ -65,9 +65,9 @@ def projects_zone() -> rx.Component:
                     "background-image": "url('imagenes/room_mobile.jpg')",
                     "background-position": "center",
                     "background-size": "cover",
-                    "background-attachment": "fixed",
+                    "background-repeat": "no-repeat",
+                    #"background-attachment": "fixed",
                     "padding": "1em", 
-                    "loading":"lazy"
                 },
             )
         ),
@@ -81,7 +81,6 @@ def projects_zone() -> rx.Component:
                 "background-attachment": "fixed",
                 "background-size": "cover",
                 "padding": "1em",
-                "loading":"lazy" # Esto asegura que la imagen cubra todo el contenedor
             },
         ),
     )

@@ -33,6 +33,7 @@ def my_skills() -> rx.Component:
                     ),
                     rx.icon(
                         tag="arrow_forward",
+                        color="white",
                         font_size=Size.MEDIUM.value,
                     ),
                     skill_item("skills/python.png", "Python"),
@@ -52,6 +53,7 @@ def my_skills() -> rx.Component:
                     ),
                     rx.icon(
                         tag="arrow_forward",
+                        color="white",
                         font_size=Size.MEDIUM.value,
                     ),
                     skill_item("skills/javascript.png", "Javascript"),
@@ -70,6 +72,7 @@ def my_skills() -> rx.Component:
                     ),
                     rx.icon(
                         tag="arrow_forward",
+                        color="white",
                         font_size=Size.MEDIUM.value,
                     ),
                     skill_item("skills/c_sharp.png", "C#"),
@@ -89,7 +92,6 @@ def my_skills() -> rx.Component:
                 "background-attachment": "fixed",
                 "background-size": "cover",
                 "padding": "1em",
-                "loading": "lazy",  # Esto asegura que la imagen cubra todo el contenedor
             },
         ),
     )
@@ -170,10 +172,10 @@ def my_skills_mobile() -> rx.Component:
                 "backdrop_filter": "blur(2px)",
                 "background-image": "url('imagenes/mobile.jpg')",
                 "background-position": "center",
-                "background-attachment": "fixed",
+                #"background-attachment": "fixed",
                 "background-size": "cover",
+                "background-repeat": "no-repeat",
                 "padding": "1em",
-                "loading": "lazy",  # Esto asegura que la imagen cubra todo el contenedor
             },
         ),
     )
